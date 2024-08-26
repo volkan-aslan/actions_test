@@ -15,4 +15,5 @@ jobs:
         run: sudo apt-get install cppcheck
 
       - name: Run CppCheck
-        run: cppcheck --enable=all --std=c++11 --suppress=missingIncludeSystem .
+        run: cppcheck --enable=all --std=c++11 --inconclusive --suppress=missingIncludeSystem --error-exitcode=1 .
+        continue-on-error: false
