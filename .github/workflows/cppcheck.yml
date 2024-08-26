@@ -4,19 +4,13 @@ on: [push]
 
 jobs:
   build:
-    name: cppcheck-test
+
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-          
-      - name: cppcheck
-        uses: deep5050/cppcheck-action@main
-        with:
-          github_token: ${{ secrets.GH_VOLKAN}}
-          
+
+      - name: Install dependencies
+        run: sudo apt-get install cppcheck
         
-      - name: publish report    
-        uses: mikeal/publish-to-github-action@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_VOLKAN }}
-          BRANCH_NAME: 'main' # your branch name goes here
+      - name: Run CppCheck
+        run: cppcheck --enable=all --suppress=missingIncludeSystem .
