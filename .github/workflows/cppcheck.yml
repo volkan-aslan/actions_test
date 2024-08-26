@@ -15,4 +15,4 @@ jobs:
         run: sudo apt-get install cppcheck
 
       - name: Run CppCheck
-        run: cppcheck --enable=all --suppress=missingIncludeSystem .
+        run: cppcheck --enable=all --inconclusive --suppress=missingIncludeSystem .
