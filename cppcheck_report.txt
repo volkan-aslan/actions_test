@@ -1,2 +1,8 @@
+Volkan.cpp:7:24: error: Division by zero. [zerodiv]
+        u_int16_t v = 3/0;
+                       ^
+Volkan.cpp:7:21: style: Variable 'v' is assigned a value that is never used. [unreadVariable]
+        u_int16_t v = 3/0;
+                    ^
 nofile:0:0: information: Cppcheck cannot find all the include files (use --check-config for details) [missingIncludeSystem]
 
