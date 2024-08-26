@@ -12,7 +12,8 @@ jobs:
       - name: Install dependencies
         run: sudo apt-get install cppcheck
 
+      - run: ls
+      - run: pwd
+      
       - name: Run CppCheck
-        run: ls
-        run: pwd
         run: cppcheck --enable=all --suppress=missingIncludeSystem .
