@@ -1,5 +1,5 @@
 name: Python package
-run-name: Pytest
+run-name: pytest
 
 on: [push]
 
